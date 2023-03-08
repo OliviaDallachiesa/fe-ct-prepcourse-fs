@@ -8,46 +8,65 @@ function esPositivo(num) {
    // Si el número es negativo ---> "Es negativo".
    // Si el número es 0, devuelve false.
    // Tu código:
+if (num===0) { 
+   return false;
+} else if (num>0) {
+      return "Es positivo";
+   } else if (num<0) {
+      return "Es negativo";
+   }
 }
 
 function agregarSimboloExclamacion(str) {
    // Agrega un símbolo de exclamación al final del string "str" y retórnalo
    // Ejemplo: "hello world" ---> "hello world!"
    // Tu código:
+let string = str.concat("!") 
+return string
 }
+
+// tmb se podria hacer con return str + "!"
+
 
 function combinarNombres(nombre, apellido) {
    // Retorna "nombre" y "apellido" combinados en un mismo string pero separados por un espacio.
    // Ejemplo: ("Soy", "Henry") ---> "Soy Henry"
    // Tu código:
-}
+return nombre + " " + apellido;
+ }
 
 function obtenerSaludo(nombre) {
    // Toma el string "nombre" y concatena otra string en la cadena para que tome la siguiente forma:
    // Ejemplo: "Martin" ---> "Hola Martin!"
    // Tu código:
+return "Hola " + nombre + "!" ;
 }
 
 function obtenerAreaRectangulo(alto, ancho) {
    // Retornar el área de un rectángulo teniendo su altura y ancho.
    // Tu código:
+let area = alto * ancho
+   return area;
 }
 
 function retornarPerimetro(lado) {
    // La función recibe como argumento la medida de un lado de un cuadrado.
    // Debes retornar su perímetro.
    // Tu código:
+return lado*4 ;
 }
 
 function areaDelTriangulo(base, altura) {
    // Calcula el área de un triángulo y retorna el resultado.
    // Tu código:
+return base * altura / 2 ;
 }
 
 function deEuroAdolar(euro) {
    // Supongamos que 1 euro equivale a 1.20 dólares.
    // Debes calcular el valor recibido como argumento pasándolo a dolares.
    // Tu código:
+return euro * 1.2 ;
 }
 
 function esVocal(letra) {
@@ -55,7 +74,18 @@ function esVocal(letra) {
    // Si el usuario ingresa un string de más de un caracter debes retornar el mensaje: "Dato incorrecto".
    // Si no es vocal, tambien debe retornar "Dato incorrecto".
    // Tu código:
+if (letra.lenght > 1) return "Dato incorrecto" ;
+if (letra === "a" || letra === "e" || letra === "i" || letra === "o" || letra === "u") return "Es vocal" ;
+else return "Dato incorrecto"
 }
+// en el caso de que queramos homogeneizar mayuscula y minuscula, podemos usar el comando toLowerCase
+// entonces queda (letra.toLowerCase() === a)
+// otra forma de resolverlo es al reves, diciendole si no es ninguna de estas letras "Dato incorrecto" y else "es vocal"
+// como hacemos esto? cambiando las || por &&
+// entonces despues de la primer condicion de lenght:
+// if (letra === "a" && letra === "e" && letra === "i" && letra === "o" && letra === "u") return "Dato incorrecto" ;
+// else return "Es vocal"
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
