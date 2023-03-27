@@ -87,6 +87,7 @@ else return "Dato incorrecto"
 // else return "Es vocal"
 
 
+
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
    esPositivo,
