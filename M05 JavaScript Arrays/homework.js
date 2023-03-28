@@ -226,21 +226,24 @@ function breakStatement(num) {
    // la ejecución y retornar el string: "Se interrumpió la ejecución".
    // [PISTA]: utiliza el statement 'break'.
    // Tu código:
-let i = 0
+let i = 1
 let res = []
 
 while (i <= 10) {
-   num = num+2
-   res.push(num)
-   if (num === i){
+   num = num + 2
+   if (num === i) {
       break;
-   } i++
-} 
+   } else {
+      res.push(num)
+      i++;
+   }
+}
+console.log(res)
 
-if (i === 10) {
-   return res
-} else {
+if (i < 10) {
    return "Se interrumpió la ejecución"
+} else {
+   return res
 } 
 }
 
@@ -251,6 +254,15 @@ function continueStatement(num) {
    // se continua con la siguiente iteración.
    // [PISTA]: utiliza el statement 'continue'.
    // Tu código:
+var i = 0;
+var array = []
+
+while (i < 10){
+   i++;
+   if (i === 5) continue;
+   num = num + 2
+   array.push(num)
+}  return array
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
